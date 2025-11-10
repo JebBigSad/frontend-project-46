@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import { Command } from 'commander';
-import genDiff from '../src/index.js';  // ← Импортируем основную функцию
+import genDiff from '../src/index.js';
 
 const program = new Command();
 
@@ -14,7 +14,7 @@ program
   .argument('<filepath2>', 'path to second file')
   .action((filepath1, filepath2) => {
     try {
-      const diff = genDiff(filepath1, filepath2);  // ← Используем genDiff
+      const diff = genDiff(filepath1, filepath2);
       console.log(diff);
     } catch (error) {
       console.error(`Error: ${error.message}`);
